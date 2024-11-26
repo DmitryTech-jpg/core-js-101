@@ -161,7 +161,7 @@ function unbracketTag(str) {
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
 function convertToUpperCase(str) {
-  return str.convertToUpperCase();
+  return str.toUpperCase();
 }
 
 /**
@@ -179,10 +179,8 @@ function convertToUpperCase(str) {
  *   ],
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(str) {
-  return str.split(';')
-    .map(email => email.trim())
-    .filter(email => email.lenght > 0);
+function extractEmails(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**
