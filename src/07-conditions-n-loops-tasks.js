@@ -69,8 +69,15 @@ function getFactorial(n) {
  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
-function getSumBetweenNumbers(/* n1, n2 */) {
-  throw new Error('Not implemented');
+function getSumBetweenNumbers(n1, n2) {
+  let first = n1;
+  let second = n2;
+  if (first > second) {
+    [first, second] = [second, first];
+  }
+  const SumN1 = (second * (second + 1)) / 2;
+  const SumN2 = ((first - 1) * first) / 2;
+  return SumN1 - SumN2;
 }
 
 
